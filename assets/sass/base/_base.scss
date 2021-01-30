@@ -91,6 +91,27 @@ strong {
       line-height: 3rem;
     }
 }
+.strong {
+    color: $black;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    @include respond (phone) {padding: 1.5rem 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+}
+.privacy {
+  padding: 3rem 0;
+}
+.privacy p {
+  @include respond (tab-port) {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding: .5rem 0;
+  }
+}
 .text-bold {
   font-weight: 700;
   display: flex;
