@@ -1,0 +1,103 @@
+.header {
+	display: flex;
+	background-color: #000000;
+	padding: 2rem 0;
+	&__logo {
+		width: 10rem;
+	}
+}
+
+.hover {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	height: 100vh;
+	background-image: url(../img/hover-race-background-scalled.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	@include respond (tab-port) {
+		height: 100vh;
+	}
+	@include respond (phone) {
+		height: 100vh;
+	}
+}
+
+#mc_embed_signup {
+	background: 0 !important;
+	width: 100%!important;
+	display: flex!important;
+	justify-content: center!important;
+	text-align: center!important;
+	padding-bottom: 4rem!important;
+	@include respond (tab-port) {
+		padding-bottom: 2rem !important;	
+	}
+}
+#mce-EMAIL {
+    width: 35rem!important;
+    padding: 0.7rem 1rem!important;
+    color: $black!important;
+    border: 0!important;
+    margin-bottom: 2rem!important;
+    margin-top: 2rem!important;
+    @include respond (phone) {
+    	width: 30rem!important;
+    }
+}
+input#mc-embedded-subscribe {
+    display: inline-block !important;
+	color: $white !important;
+	font-size: 1.8rem !important;
+	border: 0 !important;
+	transition: .5s all !important;
+	@include respond (tab-port) {
+		font-size: 1.6rem !important;
+	}
+	@include respond (phone) {
+		font-size: 1.4rem !important;
+	}
+	background: $button_bg !important;
+		padding: .7rem 3rem !important;
+		border-radius: 2rem !important;
+		&:hover {
+			background-color: darken($button_bg, 10%) !important;
+			transition: .5s all !important;
+		}
+}
+#mc_embed_signup_scroll input[type="email"]::placeholder {
+	text-align: center !important;
+}
+#mc_embed_signup .button {
+	height: auto !important;
+	line-height: 1.5 !important;
+	width: 100% !important;
+}
+#mc_embed_signup_scroll {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.vr-video {
+    position: relative;
+    width: 100%;
+    height: 100vh !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.vr-video .bg-text {
+    z-index: 1;
+    position: relative;
+}

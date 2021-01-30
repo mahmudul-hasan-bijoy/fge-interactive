@@ -1,0 +1,52 @@
+.games {
+	padding: 4rem 0;
+	position: relative;
+	height: 100vh;
+	padding-top: 4rem;
+	display: flex;
+	align-items: center;
+	@include respond (tab-land) {
+		height: auto;
+	}
+	@include respond (tab-port) {
+		height: 100vh;
+	}
+	&__text {
+		align-self: center;
+		p {
+			padding: 3.5rem 0;
+			padding-right: 25rem;
+			@include respond (tab-land) {
+				padding-right: 0;
+			}
+			@include respond (tab-port) {
+				padding: 2rem 0;
+			}
+		}
+	}
+	&__flex {
+		display: flex;
+		//padding-bottom: 15rem;
+		@include respond (tab-port) {
+			//padding-bottom: 5rem;
+			flex-direction: column;
+		}
+	}
+	&__image {
+		@include respond (tab-port) {
+			display: flex;
+			justify-content: center;
+			padding: 5rem 0 0;
+			//padding-bottom: 10rem;
+		}
+		img {
+			@include respond (tab-port) {
+				height: 30rem;
+			}
+		}
+	}
+	::selection {
+		background-color: $black;
+		color: $white;
+	}
+}

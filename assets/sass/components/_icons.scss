@@ -1,0 +1,35 @@
+.font-icons {
+    background: $white;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    i {
+    	font-size: 2.2rem;
+    	color: $black;
+    	display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: .3s all;
+    }
+    &__hero {
+        &:hover {
+            background-color: $black;
+            border: 1px solid $white;
+            transition: .3s all;
+        }
+        &:hover i{
+            color: $white !important;
+        }
+    }
+    &__black {
+        border: 1px solid $black;
+        &:hover {
+            background-color: $black;
+            border: 1px solid $black;
+            &:hover i {
+                color: $white;
+            }
+        }
+    }
+}

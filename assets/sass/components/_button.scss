@@ -1,0 +1,108 @@
+.button {
+	display: inline-block;
+	color: $white;
+	font-size: 1.8rem;
+	transition: .5s all;
+	@include respond (tab-port) {
+		font-size: 1.6rem;
+	}
+	@include respond (phone) {
+		font-size: 1.4rem;
+	}
+	&__pink {
+		background: $button_bg;
+		padding: .7rem 3rem;
+		border-radius: 2rem;
+		&:hover {
+			background-color: darken($button_bg, 10%);
+			transition: .5s all;
+		}
+	}
+	&__explore {
+		position: absolute;
+		z-index: 1;
+		bottom: 5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $white;
+		text-align: center;
+		p {
+			padding-bottom: 1rem;
+		}
+		&-black {
+			color: $black;
+		}
+		@include respond (tab-port) {
+			bottom: 7rem;
+		}
+	}
+	&__flex {
+		color: $black;
+	    display: inline-flex;
+	    justify-content: flex-start;
+	    align-items: center;
+	    font-weight: 700;
+	    transition: .5s all;
+	    i {
+	    	background-color: $black;
+			color: $white;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2.2rem;
+			line-height: 0;
+			transition: .5s all;
+	    }
+	    span {
+	    	color: $black;
+	    	padding: 0 1rem;
+	    	transition: .5s all;
+	    	&:hover {
+	    		color: $black;
+	    		transform: scale(1.08);
+	    		padding: 0 1.5rem;
+	    		transition: .5s all;
+	    	}
+	    }
+	}
+}
+.elevator {
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	bottom: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    width: 14rem;
+    margin: auto;
+    font-size: 1.2rem;
+    @include respond (tab-port) {
+    	font-size: 1rem;
+    	padding-left: 3rem;
+    }
+}
+
+.main-button a {
+    background: $button-bg;
+    padding: 1rem;
+    text-transform: capitalize;
+    //font-family: inherit;
+    color: #fff;
+    &:hover {
+    	background: darken($button-bg, 10%);
+    }
+}
+
+.elevator:hover {
+    opacity: 0.7;
+}
+
+.elevator i {
+    display: block;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}

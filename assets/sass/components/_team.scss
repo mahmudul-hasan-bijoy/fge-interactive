@@ -1,0 +1,40 @@
+.team {
+	height: 100vh;
+	position: relative;
+	background-image: url(../img/team_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	@include respond (tab-land) {
+		height: auto;
+	}
+	&__title {
+		padding-bottom: 4rem;
+		h4 {
+			font-size: 3rem;
+			text-transform: capitalize;
+			line-height: inherit;
+		}
+	}
+	&__member {
+		color: $black;
+		background-color: rgba($white, 1);
+		padding: 2rem;
+		box-shadow: 0px 0px 2rem -4px rgba(9,15,24,0.43);
+		a {
+			padding-bottom: 2rem;
+		}
+		img {
+			width: 16rem;
+			height: 16rem;
+			//border-radius: 50%;
+			transition: .5s all;
+			&:hover {
+				filter: brightness(90%);
+				transform: scale(1.06);
+				transition: .5s all;
+			}
+		}
+	}
+}

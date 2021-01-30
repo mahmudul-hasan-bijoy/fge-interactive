@@ -1,0 +1,105 @@
+.footer {
+	position: relative;
+	color: #fff;
+	background: linear-gradient(0deg, rgb(9, 15, 24), rgb(9, 15, 24)), url(../img/footer-bg.png);
+	    background-position-x: 0%, 0%;
+	    background-position-y: 0%, 0%;
+	    background-size: auto, auto;
+	background-size: cover;
+	background-blend-mode: color-dodge;
+	background-position: center;
+	padding-top: 0 !important;
+	padding-bottom: 2rem;
+	&__title {
+		h4 {
+			font-size: 2.2rem;
+			font-weight: 400;
+			text-transform: capitalize;
+			line-height: inherit;
+			@include respond (tab-port) {
+			    font-size: 2rem;
+			  }
+		}
+	}
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 2rem;
+		@include respond (phone) {
+			//flex-direction: column;
+			//align-items: center;
+			//gap: 2rem;
+		}
+	}
+	&__icons {
+	    display: inline-block;
+	    i {
+	    	font-size: 2rem;
+	    	color: $black;
+	    	background: $white;
+	    	width: 4rem;
+			height: 4rem;
+	    	border-radius: 50%;
+	    	display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: .3s all;
+			@include respond (tab-port) {
+				font-size: 1.8rem;
+				width: 3rem;
+				height: 3rem;
+			}
+			@include respond (phone) {
+				font-size: 1.6rem;
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+			&:hover {
+				transition: .5s all;
+				transform: scale(1.08);
+			}
+	    }
+	}
+	&__nav {
+		align-self: center;
+	}
+	&__logo {
+		display: flex;
+		gap: 2rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
+		@include respond (tab-port) {
+			position: relative;
+			bottom: 4rem;
+			left: 0;
+			transform: none;
+		}
+		@include respond (phone) {
+			padding-top: 2rem;
+			bottom: 0;
+		}
+		img {
+			width: 10rem;
+			@include respond (tab-port) {
+				width: 8rem;
+			}
+		}
+		@include respond (tab-port) {
+			gap: 1rem;
+		}
+		p {
+			@include respond (tab-port) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	&__map {
+		padding-bottom: 4rem !important;
+	}
+}

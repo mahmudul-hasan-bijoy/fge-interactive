@@ -1,0 +1,57 @@
+.hero {
+	position: relative;
+	height: 100vh;
+	background-image: url(../img/hero-banner-scalled.png);
+	background-position: inherit;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	@include respond (tab-port) {
+		background-position: top;
+	}
+	@include respond (phone) {
+		background-position: center;
+	}
+	&__text	{
+		display: flex;
+		justify-content: left;
+		padding-top: 9rem;
+		@include respond (phone) {
+			justify-content: center;
+			// position: absolute;
+			// right: 50%;
+			// transform: translateX(50%);
+		}
+		h1 {
+			color: $white;
+			font-size: 5rem;
+			line-height: 1.4;
+			text-transform: capitalize;
+			display: inline-block;
+			border: 2px solid $white;
+			padding: 1rem 2.5rem;
+			.digital {
+				display: block;
+				font-weight: 300;
+			}
+			@include respond (phone) {
+				font-size: 3.8rem;
+			}
+		}
+
+	}
+	&__explore {
+		position: absolute;
+		bottom: 5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $white;
+		text-align: center;
+		p {
+			padding-bottom: 1rem;
+		}
+	}
+}
+.hero .button__explore {
+    bottom: 12rem !important;
+}
