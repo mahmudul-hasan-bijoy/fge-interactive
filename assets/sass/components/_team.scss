@@ -21,6 +21,8 @@
 		color: $black;
 		background-color: rgba($white, 1);
 		padding: 2rem;
+		height: 28rem;
+		width: 100%;
 		box-shadow: 0px 0px 2rem -4px rgba(9,15,24,0.43);
 		a {
 			padding-bottom: 2rem;
@@ -30,8 +32,10 @@
 			height: 16rem;
 			//border-radius: 50%;
 			transition: .5s all;
+			filter: grayscale(100%);
 			&:hover {
-				filter: brightness(90%);
+				//filter: brightness(90%);
+				filter: grayscale(100%);
 				transform: scale(1.06);
 				transition: .5s all;
 			}
