@@ -5,17 +5,17 @@
 	padding-top: 4rem;
 	display: flex;
 	align-items: center;
-	@include respond (tab-land) {
-		height: auto;
-	}
+	// @include respond (tab-land) {
+	// 	height: auto;
+	// }
 	@include respond (tab-port) {
 		height: 100vh;
 	}
 	&__text {
+		flex-basis: 50%;
 		align-self: center;
 		p {
 			padding: 3.5rem 0;
-			padding-right: 25rem;
 			@include respond (tab-land) {
 				padding-right: 0;
 			}
@@ -26,22 +26,29 @@
 	}
 	&__flex {
 		display: flex;
-		//padding-bottom: 15rem;
-		@include respond (tab-port) {
-			//padding-bottom: 5rem;
+		justify-content: space-between;
+		align-items: center;
+		@include respond (phone) {
+			gap: 4rem;
 			flex-direction: column;
+			justify-content: center;
 		}
 	}
 	&__image {
-		@include respond (tab-port) {
+		display: flex;
+		justify-content: center;
+		flex-basis: 50%;
+		@include respond (phone) {
 			display: flex;
 			justify-content: center;
-			padding: 5rem 0 0;
-			//padding-bottom: 10rem;
 		}
 		img {
+			height: 40rem;
 			@include respond (tab-port) {
 				height: 30rem;
+			}
+			@include respond (mini-tab) {
+				height: 25rem;
 			}
 		}
 	}

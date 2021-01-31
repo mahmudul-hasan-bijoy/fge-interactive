@@ -16,11 +16,12 @@
 		display: flex;
 		justify-content: left;
 		padding-top: 9rem;
+		@include respond (mini-tab) {
+			padding-top: 1rem;
+		}
 		@include respond (phone) {
+			padding-top: 9rem;
 			justify-content: center;
-			// position: absolute;
-			// right: 50%;
-			// transform: translateX(50%);
 		}
 		h1 {
 			color: $white;
@@ -33,6 +34,9 @@
 			.digital {
 				display: block;
 				font-weight: 300;
+			}
+			@include respond (mini-tab) {
+				font-size: 3.8rem;
 			}
 			@include respond (phone) {
 				font-size: 3.8rem;
